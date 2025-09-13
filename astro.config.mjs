@@ -16,5 +16,8 @@ export default defineConfig({
     shikiConfig: {
       theme: "css-variables",
     },
+  build: {
+        assets: 'assets', // or any other name not starting with an underscore
+      }, 
   },
 });
