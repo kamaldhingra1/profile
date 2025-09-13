@@ -13,6 +13,7 @@ export const SITE: Site = {
 export const HOME: Metadata = {
   TITLE: "Home",
   DESCRIPTION: "Cyber & AI Security and more..",
+  URL: SITE.FULL_URL,
 };
 
 export const BLOG: Metadata = {
