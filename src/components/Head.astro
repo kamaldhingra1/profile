@@ -28,7 +28,10 @@ interface Props {
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const pagefindURL = new URL('/pagefind/pagefind-ui.css', Astro.site);
+const pagefindURL = new URL('/pagefind/pagefind-ui.css', Astro.url);
+var scriptElm = document.createElement('script');
+scriptElm.src = '{pagefindURL}';
+document.body.appendChild(scriptElm);
 
 const { title, description, image = "/astro-micro.jpg" } = Astro.props;
 ---
@@ -71,7 +74,7 @@ const { title, description, image = "/astro-micro.jpg" } = Astro.props;
 
 <!-- PageFind -->
 <link href={pagefindURL} rel="stylesheet" />
-<script is:inline src={'${pagefindURL}'}'></script>
+<script is:inline src={pagefindURL}></script>
 
 <ClientRouter />
 
