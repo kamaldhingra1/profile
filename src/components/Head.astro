@@ -44,6 +44,10 @@ const { title, description, image = "/astro-micro.jpg" } = Astro.props;
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+<link rel="AstroUrl " href={Astro.url} />
+<link rel="AstUrlPath" href={Astro.url.pathname} />
+<link rel="AstUOrigin" href={Astro.url.origin} />
+
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -65,8 +69,8 @@ const { title, description, image = "/astro-micro.jpg" } = Astro.props;
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <!-- PageFind -->
-<link href="pagefind/pagefind-ui.css" rel="stylesheet" />
-<script is:inline src="pagefind/pagefind-ui.js"></script>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+<script is:inline src="/pagefind/pagefind-ui.js"></script>
 
 <ClientRouter />
 
