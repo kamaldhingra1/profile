@@ -28,8 +28,8 @@ interface Props {
   image?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, SITE.FULL_URL);
-const pagefindURL = new URL('/pagefind/pagefind-ui.css', SITE.FULL_URL);
+const canonicalURL = new URL(Astro.url.pathname, (SITE.FULL_URL));
+const pagefindURL = new URL('/pagefind/pagefind-ui.css', (SITE.FULL_URL));
 
 
 
@@ -51,7 +51,7 @@ const { title, description, image = "/astro-micro.jpg" } = Astro.props;
 <link rel="AstroUrl " href={Astro.url} />
 <link rel="AstUrlPath" href={Astro.url.pathname} />
 <link rel="AstUOrigin" href={Astro.url.origin} />
-<link rel="AstUOrigin" href={pagefindURL} />
+<link rel="pagefind" href={pagefindURL} />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -74,7 +74,7 @@ const { title, description, image = "/astro-micro.jpg" } = Astro.props;
 
 <!-- PageFind -->
 <link href={pagefindURL} rel="stylesheet" />
-<script is:inline src='https://kamaldhingra1.github.io/profile/pagefind/pagefind-ui.css'></script>
+<script is:inline src="https://kamaldhingra1.github.io/profile/pagefind/pagefind-ui.css"></script>
 
 <ClientRouter />
 
