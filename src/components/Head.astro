@@ -28,7 +28,7 @@ interface Props {
   image?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, SITE.FULL_URL);
 const pagefindURL = new URL('/pagefind/pagefind-ui.css', SITE.FULL_URL);
 
 
@@ -74,7 +74,7 @@ const { title, description, image = "/astro-micro.jpg" } = Astro.props;
 
 <!-- PageFind -->
 <link href={pagefindURL} rel="stylesheet" />
-<script is:inline src='/pagefind/pagefind-ui.css'></script>
+<script is:inline src='https://kamaldhingra1.github.io/profile/pagefind/pagefind-ui.css'></script>
 
 <ClientRouter />
 
