@@ -2,6 +2,8 @@ import type { Metadata, Site, Socials } from "@types";
 
 export const SITE: Site = {
   TITLE: "Kamal Dhingra",
+  BASE:   "/profile/",
+  FULL_URL: "https://kamaldhingra1.github.io/profile/",
   DESCRIPTION: "Cyber and AI Security and more blog.",
   EMAIL: "dhingra_kk@yahoo.com",
   NUM_POSTS_ON_HOMEPAGE: 5,
