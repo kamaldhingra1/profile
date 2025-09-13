@@ -1,7 +1,7 @@
 ---
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
-import { SITE } from "@consts";
+import { BLOG, PROJECTS, SITE } from "@consts";
 ---
 
 <header transition:persist>
@@ -13,11 +13,11 @@ import { SITE } from "@consts";
         </div>
       </Link>
       <nav class="flex items-center gap-1 text-sm">
-        <Link href={SITE.FULL_URL} & "blog">blog</Link>
+        <Link href={BLOG.URL}>blog</Link>
         <span>
           {`/`}
         </span>
-        <Link href={SITE.FULL_URL} & "projects">projects</Link>
+        <Link href={PROJECTS.URL} & "projects">projects</Link>
         <span>
           {`/`}
         </span>
