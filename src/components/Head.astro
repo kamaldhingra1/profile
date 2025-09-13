@@ -51,6 +51,7 @@ const { title, description, image = "/astro-micro.jpg" } = Astro.props;
 <link rel="AstroUrl " href={Astro.url} />
 <link rel="AstUrlPath" href={Astro.url.pathname} />
 <link rel="AstUOrigin" href={Astro.url.origin} />
+<link rel="full" href={SITE.FULL_URL} />
 <link rel="pagefind" href={pagefindURL} />
 
 <!-- Primary Meta Tags -->
@@ -74,7 +75,7 @@ const { title, description, image = "/astro-micro.jpg" } = Astro.props;
 
 <!-- PageFind -->
 <link href={pagefindURL} rel="stylesheet" />
-<script is:inline src="https://kamaldhingra1.github.io/profile/pagefind/pagefind-ui.css"></script>
+<script is:inline src="https://kamaldhingra1.github.io/profile/pagefind/pagefind-ui.js"></script>
 
 <ClientRouter />
 
