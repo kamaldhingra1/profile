@@ -18,7 +18,7 @@ export const HOME: Metadata = {
 export const BLOG: Metadata = {
   TITLE: "Blog",
   DESCRIPTION: "A collection of articles on topics I am passionate about.",
-  URL: SITE.FULL_URL + "Blog",
+  URL: SITE.FULL_URL + "blog",
 };
 
 export const PROJECTS: Metadata = {
